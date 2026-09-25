@@ -5,9 +5,143 @@ document.addEventListener('contextmenu', e => e.preventDefault());
 //         DATOS DEL MODAL Y LÓGICA GENERAL
 // =========================================================================
 const projectData = {
+    gorilas: {
+        title: "Gorilas Web: Institucional",
+        image: "img/GORILAS.png",
+        description: "Plataforma web dinámica y de alto impacto visual orientada a la promoción de servicios y captura de leads, garantizando una excelente experiencia de usuario multiplataforma.",
+        tech: ["HTML5", "CSS3", "JavaScript", "Diseño Responsivo", "UX/UI"],
+        metrics: [
+            { icon: "fa-rocket", value: "Óptima", label: "Velocidad de Carga" },
+            { icon: "fa-mobile-alt", value: "100%", label: "Adaptabilidad Móvil" }
+        ],
+        link: "https://gorilasweb.netlify.app/"
+    },
+    charalesfc: {
+        title: "Charales FC: Sitio Oficial",
+        image: "img/CHARALES.png",
+        description: "Sitio web oficial desarrollado para el equipo de fútbol Charales FC. Diseñado para conectar con los aficionados, publicar novedades y fortalecer la identidad deportiva en el entorno digital.",
+        tech: ["HTML5", "CSS3", "JavaScript", "Integración Multimedia"],
+        metrics: [
+            { icon: "fa-users", value: "Alta", label: "Interacción de Fans" },
+            { icon: "fa-futbol", value: "Oficial", label: "Identidad de Marca" }
+        ],
+        link: "https://charalesfc.netlify.app/"
+    },
+    tytejecutivo: {
+        title: "T&T Ejecutivo: Servicios Corporativos",
+        image: "img/TYT.png",
+        description: "Plataforma corporativa enfocada en servicios de transporte ejecutivo. Su arquitectura web está optimizada para generar confianza B2B y facilitar la conversión de prospectos corporativos.",
+        tech: ["HTML5", "CSS3", "JavaScript", "Optimización SEO"],
+        metrics: [
+            { icon: "fa-handshake", value: "B2B", label: "Enfoque Comercial" },
+            { icon: "fa-shield-alt", value: "Confiable", label: "Diseño Seguro" }
+        ],
+        link: "https://tytejecutivo.netlify.app/"
+    },
+    dentalcarev: {
+        title: "Dental Care V: Salud y Clínica",
+        image: "img/DENTAL.png",
+        description: "Desarrollo web profesional para clínica odontológica. Organiza detalladamente la oferta de tratamientos y proporciona canales directos para la captación y agendamiento de pacientes.",
+        tech: ["HTML5", "CSS3", "JavaScript", "Formularios de Contacto"],
+        metrics: [
+            { icon: "fa-tooth", value: "Salud", label: "Nicho Especializado" },
+            { icon: "fa-calendar-check", value: "+35%", label: "Generación de Citas" }
+        ],
+        link: "https://dentalcarev.netlify.app/"
+    },
+    casaaceves: {
+        title: "Casa Aceves Bueno Boutique",
+        image: "img/aceves.png",
+        description: "Diseño y desarrollo web premium adaptado para una marca boutique, destacando una curaduría visual sofisticada e interfaz inmersiva para el sector de hospitalidad y moda.",
+        tech: ["HTML5", "CSS3", "JavaScript", "Premium Branding"],
+        metrics: [
+            { icon: "fa-gem", value: "Premium", label: "Diseño Estético" },
+            { icon: "fa-eye", value: "Visual", label: "Enfoque" }
+        ],
+        link: "https://casaacevesbuenoboutique.netlify.app/"
+    },
+    snaxweb: {
+        title: "Snaxweb: E-Commerce de Snacks",
+        image: "img/snax.png",
+        description: "Desarrollo de una plataforma web optimizada para la comercialización y distribución de snacks, agilizando el flujo de pedidos del cliente mediante un catálogo claro y directo.",
+        tech: ["HTML5", "CSS3", "JavaScript", "E-Commerce Design"],
+        metrics: [
+            { icon: "fa-shopping-basket", value: "Catálogo", label: "Dinámico" },
+            { icon: "fa-truck", value: "Fluido", label: "Proceso de Pedido" }
+        ],
+        link: "https://snaxweb.netlify.app/"
+    },
+    terazacesaromar: {
+        title: "Terraza Cesar Omar: Renta de Eventos",
+        image: "img/CESAR.png",
+        description: "Página web desarrollada para la promoción de terraza de eventos. Integra galerías de alta calidad e información de servicios con una fuerte llamada a la acción hacia WhatsApp.",
+        tech: ["HTML5", "CSS3", "JavaScript", "WhatsApp API", "Galerías Dinámicas"],
+        metrics: [
+            { icon: "fa-images", value: "Impactante", label: "Exhibición Visual" },
+            { icon: "fa-comment-dots", value: "Directa", label: "Comunicación" }
+        ],
+        link: "https://terazacesaromar.netlify.app/"
+    },
+    vennyflowers: {
+        title: "Venny Flowers: Catálogo Floral",
+        image: "img/VENNY.png",
+        description: "Tienda y catálogo virtual para floristería con un diseño altamente estético. Facilita la exploración de productos y optimiza la experiencia de compra en línea para regalos y eventos.",
+        tech: ["HTML5", "CSS3", "JavaScript", "UI/UX Elegante"],
+        metrics: [
+            { icon: "fa-seedling", value: "Atractivo", label: "Catálogo Visual" },
+            { icon: "fa-shopping-cart", value: "Simple", label: "Conversión de Venta" }
+        ],
+        link: "https://vennyflowers.netlify.app/"
+    },
+    lebj: {
+        title: "LEBJ: Plataforma Corporativa",
+        image: "img/LEBJ.png",
+        description: "Solución digital corporativa orientada a la presentación de servicios profesionales, construida con una estructura sólida, limpia y fácil de navegar para los clientes.",
+        tech: ["HTML5", "CSS3", "JavaScript", "Optimización de Rendimiento"],
+        metrics: [
+            { icon: "fa-briefcase", value: "Profesional", label: "Proyección B2B" },
+            { icon: "fa-mouse-pointer", value: "Intuitiva", label: "Navegación" }
+        ],
+        link: "https://lebj.netlify.app/"
+    },
+    rosfresh: {
+        title: "Ros Fresh: Productos Frescos",
+        image: "img/ROS.png",
+        description: "Sitio web comercial para marca de productos alimenticios. Enfocado en comunicar la frescura de los productos a través de una paleta de colores vibrante y secciones bien organizadas.",
+        tech: ["HTML5", "CSS3", "JavaScript", "Diseño Minimalista"],
+        metrics: [
+            { icon: "fa-apple-alt", value: "Fresco", label: "Identidad Visual" },
+            { icon: "fa-check-circle", value: "Clara", label: "Exposición de Producto" }
+        ],
+        link: "https://rosfresh.netlify.app/"
+    },
+    naturalfruit: {
+        title: "Natural Fruit Alameda: Retail",
+        image: "img/NATURALWEB.png",
+        description: "Sitio web de E-commerce y promoción para productos naturales. Destaca por su adaptabilidad móvil y un diseño que refleja salud y bienestar, impulsando las ventas del negocio.",
+        tech: ["HTML5", "CSS3", "JavaScript", "Mobile First"],
+        metrics: [
+            { icon: "fa-leaf", value: "Saludable", label: "Estética de Marca" },
+            { icon: "fa-mobile", value: "100%", label: "Optimización Móvil" }
+        ],
+        link: "https://naturalfruitalameda.netlify.app/"
+    },
+    rifanaturalfruit: {
+        title: "Rifa Natural Fruit: Sistema de Sorteos",
+        image: "img/NATURALRIFA.png",
+        description: "Herramienta interactiva desarrollada a medida para gestionar las participaciones en sorteos digitales de la marca. Permite una interacción controlada y aumenta el engagement de la comunidad.",
+        tech: ["HTML5", "CSS3", "JavaScript", "Lógica Condicional", "Sistemas Interactivos"],
+        metrics: [
+            { icon: "fa-ticket-alt", value: "Alto", label: "Nivel de Participación" },
+            { icon: "fa-cogs", value: "A Medida", label: "Desarrollo Lógico" }
+        ],
+        link: "https://rifanaturalfruit.netlify.app/"
+    },
+
+    // PROYECTOS ANTERIORES
     snackfly: {
         title: "Snackfly: Menú y Pedidos por WhatsApp",
-        image: "thumb-snackfly.jpeg",
+        image: "img/thumb-snackfly.jpeg",
         description: "Plataforma enfocada en la conversión rápida para venta de snacks. Incluye un catálogo dinámico y un carrito simulado que calcula el pedido y genera automáticamente el mensaje de WhatsApp al vendedor, agilizando el proceso de compra.",
         tech: ["HTML5", "CSS3", "JavaScript", "Diseño Responsivo", "UX/UI"],
         metrics: [
@@ -18,7 +152,7 @@ const projectData = {
     },
     tortaahogada: {
         title: "La Pinche Torta Ahogada: Web Promocional",
-        image: "thumb-tortaahogada.png",
+        image: "img/thumb-tortaahogada.png",
         description: "Sitio web para restaurante con un fuerte enfoque en la identidad de marca y promociones. Se implementó una funcionalidad de cupones interactiva para incentivar la visita y un mapa integrado.",
         tech: ["HTML5", "CSS3", "JavaScript", "Mapbox/Google Maps API"],
         metrics: [
@@ -29,7 +163,7 @@ const projectData = {
     },
     viajesanita: {
         title: "Viajes Turísticos Anita: Corporativo",
-        image: "thumb-viajesanita.jpg",
+        image: "img/thumb-viajesanita.jpg",
         description: "Sitio web profesional y elegante para una agencia de viajes. Se enfocó en la confianza, destacando itinerarios, destinos y una sección interactiva de testimonios de clientes satisfechos.",
         tech: ["HTML5", "CSS3", "JavaScript", "Fácil Mantenimiento"],
         metrics: [
@@ -40,7 +174,7 @@ const projectData = {
     },
     encuestaestres: {
         title: "Encuesta Anónima de Estrés: Herramienta Digital",
-        image: "thumb-encuestaestres.png",
+        image: "img/thumb-encuestaestres.png",
         description: "Herramienta de salud mental con un formulario interactivo y manejo de estado. La aplicación guía al usuario a través de un proceso para calcular su nivel de estrés y ofrece visualización de resultados.",
         tech: ["HTML5", "CSS3", "JavaScript", "Manipulación del DOM", "UX/UI"],
         metrics: [
@@ -51,7 +185,7 @@ const projectData = {
     },
     ecohogar: {
         title: "EcoHogar: E-Commerce de Productos Ecológicos",
-        image: "thumb-ecohogar.png",
+        image: "img/thumb-ecohogar.png",
         description: "Tienda online que promueve productos sostenibles. Diseño limpio con catálogo de productos, carrito de compras (simulado) y un blog integrado para generar contenido y tráfico orgánico.",
         tech: ["HTML5", "CSS3", "JavaScript", "Blog Estático", "Figma Design"],
         metrics: [
@@ -62,7 +196,7 @@ const projectData = {
     },
     iker: {
         title: "Invitación Web Iker (Pool Party)",
-        image: "thumb-iker.png",
+        image: "img/thumb-iker.png",
         description: "Invitación digital interactiva y animada para un evento especial. Incluye una cuenta regresiva, galería de fotos, confirmación de asistencia (RSVP) directa por WhatsApp y mapa de ubicación.",
         tech: ["HTML5", "CSS3", "JavaScript", "RSVP por WhatsApp", "Cuenta Regresiva"],
         metrics: [
@@ -73,7 +207,7 @@ const projectData = {
     },
     angie: {
         title: "Invitación Web Angie (13 años)",
-        image: "thumb-angie.png",
+        image: "img/thumb-angie.png",
         description: "Invitación interactiva con tema de moda, diseñada para un público adolescente. Muestra la fecha, lugar, información de regalos y una cuenta regresiva dinámica.",
         tech: ["HTML5", "CSS3", "JavaScript", "Diseño Personalizado"],
         metrics: [
@@ -84,7 +218,7 @@ const projectData = {
     },
     dieguito: {
         title: "Invitación Web Dieguito (Rayo McQueen)",
-        image: "thumb-dieguito.png",
+        image: "img/thumb-dieguito.png",
         description: "Invitación digital con diseño atractivo para niños, temática de Rayo McQueen. Presenta de manera clara el lugar, la hora y los detalles del evento, ideal para compartir en grupos de padres.",
         tech: ["HTML5", "CSS3", "JavaScript", "Theming"],
         metrics: [
@@ -93,20 +227,9 @@ const projectData = {
         ],
         link: "https://fiestadieguito.netlify.app/"
     },
-    snaxweb: {
-        title: "Snaxweb: E-Commerce de Snacks",
-        image: "img/thumb-snaxweb.png",
-        description: "Desarrollo de una plataforma web optimizada para la comercialización y distribución mayorista o minorista de botanas, agilizando el flujo de pedidos del cliente.",
-        tech: ["HTML5", "CSS3", "JavaScript", "E-Commerce Design"],
-        metrics: [
-            { icon: "fa-shopping-basket", value: "Catálogo", label: "Dinámico" },
-            { icon: "fa-mobile-alt", value: "100%", label: "Responsivo" }
-        ],
-        link: "https://snaxweb.netlify.app/"
-    },
     hlyd: {
         title: "HLYD: Landing Page Corporativa",
-        image: "img/thumb-hlyd.png",
+        image: "img/HLYD.png",
         description: "Solución web integral corporativa orientada a la identidad corporativa y captación de clientes potenciales con interfaz de alta velocidad.",
         tech: ["HTML5", "CSS3", "JavaScript", "UX/UI Optimization"],
         metrics: [
@@ -115,20 +238,9 @@ const projectData = {
         ],
         link: "https://hlyd.netlify.app/"
     },
-    casaaceves: {
-        title: "Casa Aceves Bueno Boutique",
-        image: "img/thumb-casaaceves.png",
-        description: "Diseño y desarrollo web premium adaptado para una marca boutique, destacando una curaduría visual sofisticada e interfaz inmersiva.",
-        tech: ["HTML5", "CSS3", "JavaScript", "Premium Branding"],
-        metrics: [
-            { icon: "fa-gem", value: "Premium", label: "Diseño Estético" },
-            { icon: "fa-eye", value: "Visual", label: "Enfoque" }
-        ],
-        link: "https://casaacevesbuenoboutique.netlify.app/"
-    },
     digitalityinvites: {
         title: "Digitality Invites: Plataforma de Eventos",
-        image: "img/thumb-digitalityinvites.png",
+        image: "img/invites.png",
         description: "Ecosistema web especializado en la exhibición, personalización e información comercial de invitaciones inteligentes interactivas.",
         tech: ["HTML5", "CSS3", "JavaScript", "Event Strategy"],
         metrics: [
@@ -136,9 +248,8 @@ const projectData = {
             { icon: "fa-share-nodes", value: "Fácil", label: "Difusión" }
         ],
         link: "https://digitalityinvites.netlify.app/"
-    },
+    }
 };
-
 
 document.addEventListener('DOMContentLoaded', () => {
     
@@ -208,11 +319,21 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    
     // --- 2. LÓGICA DEL BOTÓN DE LIKES (LOCALSTORAGE Y SIMULACIÓN) ---
 
-    // Objeto que define el número inicial de likes simulados por proyecto.
     const defaultLikes = {
+        'gorilas': 45,
+        'charalesfc': 82,
+        'tytejecutivo': 33,
+        'dentalcarev': 28,
+        'casaaceves': 48,
+        'snaxweb': 55,
+        'terazacesaromar': 31,
+        'vennyflowers': 40,
+        'lebj': 24,
+        'rosfresh': 37,
+        'naturalfruit': 41,
+        'rifanaturalfruit': 50,
         'snackfly': 25,
         'tortaahogada': 18,
         'viajesanita': 12,
@@ -221,22 +342,17 @@ document.addEventListener('DOMContentLoaded', () => {
         'iker': 35,
         'angie': 15,
         'dieguito': 10,
-        'snaxweb': 22,
         'hlyd': 14,
-        'casaaceves': 19,
         'digitalityinvites': 42
     };
 
-    // Función para guardar los likes en LocalStorage
     const saveLikes = (projectId, count) => {
         let likes = JSON.parse(localStorage.getItem('projectLikes')) || {};
         likes[projectId] = count;
         localStorage.setItem('projectLikes', JSON.stringify(likes));
     };
 
-    // Función para cargar los likes al inicio
     const loadLikes = () => {
-        // Carga los likes guardados por el usuario, o un objeto vacío si es la primera visita.
         let likes = JSON.parse(localStorage.getItem('projectLikes')) || {};
         
         document.querySelectorAll('.like-container').forEach(container => {
@@ -244,36 +360,27 @@ document.addEventListener('DOMContentLoaded', () => {
             const likeCountSpan = container.querySelector('.like-count');
             const likeButton = container.querySelector('.like-button');
             
-            // SI NO HAY UN VALOR GUARDADO EN EL NAVEGADOR,
-            // usa el valor por defecto (simulado)
             if (likes[projectId] === undefined || likes[projectId] === null) { 
                 likes[projectId] = defaultLikes[projectId] || 0;
             }
 
-            // Muestra el contador
             likeCountSpan.textContent = likes[projectId];
 
-            // Marcar si el usuario ya dio like (se guarda por separado)
             if (localStorage.getItem(`liked-${projectId}`) === 'true') {
                  likeButton.classList.add('liked');
             }
         });
         
-        // Guarda los likes iniciales o actualizados para futuras visitas
         localStorage.setItem('projectLikes', JSON.stringify(likes));
     };
 
-    // Función para gestionar el like/unlike
     const toggleLike = (container) => {
         const projectId = container.getAttribute('data-project-id');
         const likeCountSpan = container.querySelector('.like-count');
         const likeButton = container.querySelector('.like-button');
         let currentLikes = parseInt(likeCountSpan.textContent);
         
-        // Lógica para el toggle
         if (localStorage.getItem(`liked-${projectId}`) === 'true') {
-            // Revertir like: decrementa el contador
-            // Esto asegura que el contador nunca baje del valor por defecto
             if (currentLikes > defaultLikes[projectId]) {
                  currentLikes--; 
             } else {
@@ -282,34 +389,28 @@ document.addEventListener('DOMContentLoaded', () => {
             
             likeCountSpan.textContent = currentLikes;
             likeButton.classList.remove('liked');
-            localStorage.setItem(`liked-${projectId}`, 'false'); // Marcar como NO liked
-            saveLikes(projectId, currentLikes); // Guardar en localStorage
+            localStorage.setItem(`liked-${projectId}`, 'false');
+            saveLikes(projectId, currentLikes); 
 
         } else {
-            // Dar like: incrementa el contador
             currentLikes++;
             likeCountSpan.textContent = currentLikes;
             likeButton.classList.add('liked');
-            localStorage.setItem(`liked-${projectId}`, 'true'); // Marcar como liked
-            saveLikes(projectId, currentLikes); // Guardar en localStorage
+            localStorage.setItem(`liked-${projectId}`, 'true'); 
+            saveLikes(projectId, currentLikes); 
         }
     };
 
-    // Asignar el evento a los botones de like
     document.querySelectorAll('.like-button').forEach(button => {
         button.addEventListener('click', (e) => {
-            // El contenedor .like-container es el padre del botón
             toggleLike(e.currentTarget.closest('.like-container'));
         });
     });
 
-    // Cargar likes al iniciar
     loadLikes();
     
-    
-    // --- 3. SCROLL SUAVE, BACK TO TOP Y PROGRESS BAR (Lógica Adicional) ---
+    // --- 3. SCROLL SUAVE, BACK TO TOP Y PROGRESS BAR ---
 
-    // Scroll Suave 
     document.querySelectorAll('nav a[href^="#"], .back-to-top[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -319,7 +420,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Lógica para Back to Top y Progress Bar
     const backToTopButton = document.getElementById('back-to-top');
     const progressBar = document.getElementById('progress-bar');
     
